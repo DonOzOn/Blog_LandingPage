@@ -1,0 +1,183 @@
+        /*---------------------------------------------Default------------------------------------------*/
+        
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        
+        html {
+            font-family: 'Lato', sans-serif;
+            font-size: 20px;
+            background-color: #FFFFFF;
+            color: #5a5a5a;
+            text-rendering: optimizeLegibility;
+            /* mac dinh la font size = 16px */
+        }
+        /*--------------------------------------------------------------------------------------------------*/
+        /*---------------------------------------------Reuseable------------------------------------------*/
+        
+        .btn {
+            background-color: #008B00;
+            color: #FFFFFF;
+            padding: 15px 30px;
+            border-radius: 20px;
+            margin: 0 10px;
+            text-decoration: none;
+            width: 180px;
+            display: inline-block;
+            text-align: center;
+            transition: background-color 2s;
+        }
+        
+        .btn:hover,
+        .btn:active {
+            background-color: #006400;
+        }
+        
+        .clearfix::after {
+            content: " ";
+            display: table;
+            clear: both;
+        }
+        
+        h1,
+        h2 {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            word-spacing: 5px;
+        }
+        
+        h2 {
+            color: #008B00;
+            font-size: 200%;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        h2::after {
+            content: " ";
+            display: block;
+            width: 150px;
+            height: 2px;
+            background-color: rgb(101, 196, 101, 0.5);
+            margin: 0 auto;
+            margin-top: 5px;
+        }
+        
+        h1 {
+            font-size: 300%;
+            font-weight: 100;
+            color: #5a5a5a;
+            line-height: 135%;
+            margin-bottom: 50px;
+        }
+        
+        .p-long {
+            text-align: center;
+            margin: 40px 0;
+            width: 70%;
+            margin-left: 15%;
+            line-height: 150%;
+        }
+        
+        section {
+            padding: 50px;
+        }
+        /*--------------------------------------------------------------------------------------------------*/
+        /*---------------------Header-----------------------------------------------*/
+        
+        .logo {
+            width: 150px;
+            float: left;
+            margin-left: 70px;
+            margin-top: 30px;
+        }
+        
+        .main-nav {
+            float: right;
+            list-style: none;
+            margin-right: 70px;
+            margin-top: 57px;
+        }
+        
+        .main-nav li a {
+            text-decoration: none;
+            color: black;
+            font-size: 110%;
+            font-weight: 100;
+            transition: color 0.5s;
+        }
+        
+        .main-nav li {
+            display: inline-block;
+            margin-left: 30px;
+        }
+        
+        .main-nav li a:hover,
+        .main-nav li a:active {
+            color: #008800;
+        }
+        
+        header {
+            background-image: linear-gradient(to right top, rgba(155, 206, 151, 0.8) 55%, rgba(247, 247, 247, 0.85)), url(../img/IMG_20171008_133825_840.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            /*view hight*/
+            background-attachment: fixed;
+        }
+        
+        .row {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .heading-main-box {
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            transform: translate(-20%, -10%);
+            max-width: 1200px;
+        }
+        /*-------------------------------------------------------------------------*/
+        /*---------------------------------------Section----------------------------------------*/
+        
+        .about-picture {
+            position: relative;
+        }
+        
+        .about-picture img {
+            width: 90%;
+            height: 200px;
+            border-radius: 20px;
+            border: 3px solid #8ec78e;
+            box-shadow: 5px 0px 20px 5px #8ec78e;
+            /*x , y do mo , do phong rong mau*/
+            margin-top: 50px;
+        }
+        
+        .picture-title {
+            position: absolute;
+            text-align: center;
+            left: 50%;
+            top: 50%;
+            font-size: 135%;
+            color: white;
+            font-weight: bold;
+            transform: translate(-60%, 300%);
+            opacity: 0;
+            transition: transform .7s;
+        }
+        
+        .about-picture:hover img,
+        .about-picture:active img {
+            filter: brightness(70%) blur(2px);
+        }
+        
+        .about-picture:hover .picture-title,
+        .about-picture:active .picture-title {
+            transform: translate(-60%, 30%);
+            opacity: 1;
+        }
+        /*--------------------------------------------------------------------------------------*/
